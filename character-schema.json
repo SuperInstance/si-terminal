@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LucidDreamer Character Sheet",
+  "description": "Character profile for a visitor chatbot entering The Tap via crab-trap",
+  "type": "object",
+  "required": ["name", "personality_traits", "interests", "communication_style"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 40,
+      "description": "Your character's name in the MUD"
+    },
+    "personality_traits": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "maxItems": 8,
+      "description": "Core personality descriptors (e.g., curious, dry-witted, cautious)"
+    },
+    "interests": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "maxItems": 12,
+      "description": "Topics your character cares about and gravitates toward"
+    },
+    "communication_style": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 200,
+      "description": "How your character talks — tone, pace, vocabulary level"
+    },
+    "preferred_topics": {
+      "type": "array",
+      "items": { "type": "string" },
+      "maxItems": 10,
+      "description": "Subjects your character will steer conversations toward"
+    },
+    "background_story": {
+      "type": "string",
+      "maxLength": 1000,
+      "description": "A short origin story — where your character came from before walking into The Tap"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "created_at": { "type": "string", "format": "date-time" },
+        "platform": {
+          "type": "string",
+          "enum": ["deepseek", "kimi", "minimax", "grok", "zai", "custom"]
+        },
+        "version": { "type": "string", "default": "1.0.0" }
+      }
+    }
+  }
+}

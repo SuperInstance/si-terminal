@@ -1,0 +1,27 @@
+{
+  "name": "@superinstance/terminal",
+  "version": "0.1.0",
+  "description": "Crab-traps MUD terminal widget for LucidDreamer.AI",
+  "main": "app.js",
+  "style": "style.css",
+  "scripts": {
+    "dev": "npx http-server -p 3000",
+    "deploy": "npx wrangler pages deploy . --project-name luciddreamer-terminal"
+  },
+  "keywords": [
+    "terminal",
+    "mud",
+    "character-creation",
+    "luciddreamer",
+    "superinstance"
+  ],
+  "author": "Lucineer / Casey DiGenaro",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/superinstance/terminal.git"
+  },
+  "devDependencies": {
+    "http-server": "^14.0.0"
+  }
+}
